@@ -1,68 +1,37 @@
-# Microsoft-Windows-Defender-and-Firewall
+# Smart Greenhouse
 
-## Objective
+## Project Overview
+The IoT-Based Garden Monitoring and Protection System is designed to help maintain plant health and security through smart monitoring. The system integrates IoT sensors, real-time data processing, and automation to optimize environmental conditions and detect potential threats.<br><br>
 
-In this project I review Windows Security Virus and threat protection, update threat definitions, and run Windows Defender Antivirus quick scan in order to detect or verify any threar analysis in the system or the device.
+## How?
+The system utilizes environmental sensors such as temperature, humidity, and light sensors to track garden conditions. These sensors provide real-time data that ensures optimal plant care. A NodeMCU microcontroller connects the sensors to a cloud-based database, enabling continuous monitoring and data logging. The collected data is then transmitted via Wi-Fi to a structured database, allowing users to access and analyze information through an interactive dashboard.<br><br>
 
+To optimize irrigation, the system uses soil humidity levels to trigger automated watering, ensuring that plants receive water only when necessary. Security features include an ultrasonic sensor that detects intrusions and activates a buzzer to deter pests or unauthorized access. Additionally, a photoresistor monitors light levels and controls an LED indicator, providing valuable insights into sunlight exposure for plants. If temperature levels exceed a predefined threshold, the system activates a cooling fan to prevent plant overheating.<br><br>
 
-### Skills Learned
+All sensor data is stored and processed in a cloud database, allowing for detailed analysis of environmental trends. A web-based dashboard displays real-time sensor readings, enabling users to make informed decisions about garden maintenance. Furthermore, the system offers remote access, allowing users to monitor and control settings from any location via an IoT platform.<br><br>
 
-- Microsoft Windows Defender.
-- Windows Firewall. 
+Arduino programming is used to establish system parameters and ensure smooth integration with a XAMPP-based database. This setup enables continuous data monitoring and logging. The integrated circuit board connects sensors and actuators via a protoboard, allowing automated responses to specific environmental conditions. An ultrasonic sensor and buzzer combination serve as a security measure, detecting movement and triggering an alarm to deter pests or intruders.<br><br>
 
-### Tools Used
+A photoresistor-based LED system regulates lighting conditions. If light levels fall below a certain threshold, the LED turns on to indicate low light availability. Power management is achieved using a 9V battery with a voltage regulator to ensure stable distribution. Essential components such as the buzzer, sensors, and cooling system receive power through dedicated pins on the NodeMCU.<br><br>
 
-- Microsoft Defender Antivirus: Understanding how to configure, manage, and use Microsoft Defender Antivirus is a fundamental skill for protecting Windows systems from malware and other threats.
-- Windows Defender Firewall: Learning how to configure and manage the built-in firewall in Windows for network security purposes.
+To maintain optimal environmental conditions, the system includes an automated cooling mechanism. If the temperature rises above 24-26°C, a relay-controlled fan activates to cool the plants. The software integration involves multiple platforms such as Arduino IDE, XAMPP, phpMyAdmin, and other tools to facilitate data processing and storage, ensuring a smooth interaction between hardware and cloud services.<br><br>
 
-## Steps
-Problem: Run a custom scan that only scans the files in the Downloads folder.
+## Key Components
+- **NodeMCU**: Manages data transmission and device communication.<br>
+- **DHT11 Sensor**: Measures temperature and humidity.<br>
+- **Photoresistor**: Detects light intensity.<br>
+- **Ultrasonic Sensor**: Monitors object proximity for security.<br>
+- **Buzzer**: Emits an alarm when an intrusion is detected.<br>
+- **Cooling Fan**: Activated when temperature exceeds safe levels.<br>
+- **LED Indicators**: Provide visual feedback on environmental conditions.<br>
+- **Cloud Database**: Stores and processes sensor data for analysis.<br><br>
 
-<p align="center">
-Access and review Windows Security Virus & threat protection where is a built-in security feature that scans for threats on our system. In this same window we accesss to the scan options so we can guarantee a custom scan<br/>
-<img src="https://i.imgur.com/aJSsEul.png" height="80%" width="80%"/>
-<br/>
-<br/>
-In the scan options window I select the custom scan so it can realize the scan needed in the specific file<br/>
-<img src="https://i.imgur.com/Bo5LKlN.png" height="80%" width="80%"/>
-<br/>
-<br/>
-I select in this case required the Donwloads folder to do the scan for threats or any suspect file<br/>
-<img src="https://i.imgur.com/gcVkY9g.png" height="80%" width="80%"/>
-<br/>
-<br/>
+## Results & Benefits
+- **Optimized Plant Care**: Maintains proper watering and light conditions.<br>
+- **Automated Monitoring**: Reduces manual effort in garden maintenance.<br>
+- **Enhanced Security**: Protects plants from pests and unauthorized access.<br>
+- **Data-Driven Insights**: Helps users track environmental patterns for better decision-making.<br>
+- **Remote Accessibility**: Allows monitoring and control from any location.<br><br>
 
+This project demonstrates the potential of IoT in sustainable gardening, providing an efficient and smart approach to plant care and security.
 
-Problem 2:  Use Windows Defender Firewall with Advanced Security to block Windows Remote Management on the Public network.
-
-<p align="center">
-As we select Advanced settings on the Firewall & network protection screen. Here there is an Overview in the center panel. Inbound rules: Inbound rules determine what traffic is allowed to the computer.  Note that some of the rules have a green checkmark next to them. This indicates that the rule is enabled to allow inbound communication. The rules without a checkmark are available for use but are not enabled.
-<br/>
-<img src="https://i.imgur.com/UiAjgH6.png" height="80%" width="80%"/>
-<br/>
-<br/>
-I select the Windows Remote Management inbound rule in the Overview panel of Windows Defender Firewall with Advanced Security.
-<br/>
-<img src="https://i.imgur.com/fb7jToO.png" height="80%" width="80%"/>
-<br/>
-<br/>
-Because we want to allow communication only with the domain and private networks, For Public this box should not have a checkmark.
-<br/>
-<img src="https://i.imgur.com/p0yBypW.png" height="80%" width="80%"/>
-<br/>
-<br/>
-Made an inbound rule that blocks communication with the public network. Since the new rule will be similar to the last, I copied the existing rule. Since we want to block connection with the public network, I selected Block the connection on the General tab.
-<br/>
-<img src="https://i.imgur.com/Jh2qKRc.png" height="80%" width="80%"/>
-<br/>
-<br/>
-In the Advanced tab I put the checkmark in the Public only 
-<br/>
-<img src="https://i.imgur.com/mBwtml3.png" height="80%" width="80%"/>
-<br/>
-<br/>
-Now it appeared a green checkmark appears next to the first rule indicating that the rule allowing communication is enabled. A circle with a line through it appeared next to the second rule indicating that the rule blocking communication is enabled.
-<br/>
-<img src="https://i.imgur.com/fqqpMnh.png" height="80%" width="80%"/>
-<br/>
-<br/>
